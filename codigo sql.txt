@@ -1,0 +1,19 @@
+set serveroutput on;
+declare
+
+    carro number := &valor;
+    seis number;
+    doze number;
+    dezoito number;
+    
+begin
+    seis := (carro/5)+((carro/5)*4)*1.10;
+    doze := (carro/5)+((carro/5)*4)*1.15;
+    dezoito := (carro/5)+((carro/5)*4)*1.20;
+    
+    dbms_output.put_line('o valor do carro em 6 parcelas '||seis);
+    
+    dbms_output.put_line('o valor do carro em 12 parcelas '||doze);
+    
+    dbms_output.put_line('o valor do carro em 18 parcelas '||dezoito);
+end;
